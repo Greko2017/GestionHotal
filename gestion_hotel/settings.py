@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+ACCOUNT_PASSWORD_EXPIRY = 60*60*24*5  # seconds until pw expires, this example shows five days
+ACCOUNT_PASSWORD_USE_HISTORY = True
 
 # Application definition
 
@@ -54,7 +56,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "account.middleware.LocaleMiddleware",
     "account.middleware.TimezoneMiddleware",
-    'account.middleware.ExpiredPasswordMiddlewar',
 ]
 
 ROOT_URLCONF = 'gestion_hotel.urls'
