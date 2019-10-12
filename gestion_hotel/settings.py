@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     "account",  
+    'pinax_theme_bootstrap',
+    'bootstrapform',
 ]
 
 SITE_ID = 1
@@ -63,7 +65,7 @@ ROOT_URLCONF = 'gestion_hotel.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
